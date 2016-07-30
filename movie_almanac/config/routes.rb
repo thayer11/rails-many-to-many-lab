@@ -1,23 +1,11 @@
 Rails.application.routes.draw do
-  get 'movies/index'
-
-  get 'movies/show'
-
-  get 'movies/new'
-
-  get 'movies/create'
-
-  get 'movies/destroy'
-
-  get 'actors/index'
-
-  get 'actors/show'
-
-  get 'actors/new'
-
-  get 'actors/create'
-
-  get 'actors/destroy'
+  get '/movies', to: "movies#index"
+  
+  get '/actors', to: 'actors#index'
+  
+  get '/actors/:id', to: 'actors#show'
+  
+  get '/movies/:id', to: 'movies#show'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
